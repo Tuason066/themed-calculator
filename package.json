@@ -1,0 +1,16 @@
+{
+  "name": "calculator-app-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch-tw": "npx tailwindcss -i ./src/input.css -o ./dist/style.css --watch",
+    "watch-ts": "tsc --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.1",
+    "typescript": "^5.0.4"
+  }
+}

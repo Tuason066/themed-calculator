@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* background */
+    --primary-bg: 222deg 26% 31%; /* main background */
+    --light-primary-bg: 223deg 31% 20%; /* toggle background, keypad background */
+    --dark-primary-bg: 224deg 36% 15%; /* screen background */
+
+    /* keys */
+    --key-neutral-bg: 225deg 21% 49%; /* key background */
+    --key-neutral-shadow: 224deg 28% 35%; /* key shadow */
+
+    --key-accent-bg: 6deg 63% 50%; /* key background, toggle */
+    --key-accent-shadow: 6deg 70% 34%; /* key shadow */
+
+    --key-primary-bg: 30deg 25% 89%; /* key background */
+    --key-primary-shadow: 28deg 16% 65%; /* key shadow */
+
+    /* text */
+    --color-primary: 221deg 14% 31%;
+    --color-accent: 0deg 0% 100%;
+    --color-neutral: 0deg 0% 100%;
+  }
+
+  .theme-2 {
+    /* background */
+    --primary-bg: 0deg 0% 90%; /* main background */
+    --light-primary-bg: 0deg 5% 81%; /* toggle background, keypad background */
+    --dark-primary-bg: 0deg 0% 93%; /* screen background */
+
+    /* keys */
+    --key-neutral-bg: 185deg 42% 37%; /* key background */
+    --key-neutral-shadow: 185deg 58% 25%; /* key shadow */
+
+    --key-accent-bg: 25deg 98% 40%; /* key background, toggle */
+    --key-accent-shadow: 25deg 99% 27%; /* key shadow */
+
+    --key-primary-bg: 45deg 7% 89%; /* key background */
+    --key-primary-shadow: 35deg 11% 61%; /* key shadow */
+
+    /* text */
+    --color-primary: 60deg 10% 19%;
+    --color-accent: 0deg 0% 100%;
+    --color-neutral: 0deg 0% 100%;
+  }
+
+  .theme-3 {
+    /* background */
+    --primary-bg: 268deg 75% 9%; /* main background */
+    --light-primary-bg: 268deg 71% 12%; /* toggle background, keypad background */
+    --dark-primary-bg: 268deg 71% 12%; /* screen background */
+
+    /* keys */
+    --key-neutral-bg: 281deg 89% 26%; /* key background */
+    --key-neutral-shadow: 285deg 91% 52%; /* key shadow */
+
+    --key-accent-bg: 176deg 100% 44%; /* key background, toggle */
+    --key-accent-shadow: 177deg 92% 70%; /* key shadow */
+
+    --key-primary-bg: 268deg 47% 21%; /* key background */
+    --key-primary-shadow: 290deg 70% 36%; /* key shadow */
+
+    /* text */
+    --color-primary: 52deg 100% 62%;
+    --color-accent: 198deg 20% 13%;
+    --color-neutral: 0deg 0% 100%;
+  }
+}
+
+/* manual styling due to its uniqueness for the other theme */
+.theme-1 .title-container,
+.theme-1 .output-container {
+  @apply text-color-neutral;
+}
+/* end of manual styling */
+
+/* theme title */
+.theme-indicator {
+  @apply rounded-full bg-key-accent-bg shadow shadow-key-accent-shadow w-3 h-full transition-all duration-700;
+}
+
+.theme-1 .theme-indicator {
+  margin-right: auto;
+}
+.theme-2 .theme-indicator {
+  margin: 0 auto;
+}
+.theme-3 .theme-indicator {
+  margin-left: auto;
+}
+
+.keys {
+  @apply bg-key-primary-bg shadow-[0_3px_0px_0px] shadow-key-primary-shadow h-12 rounded grid place-items-center hover:saturate-200 hover:brightness-125;
+}
+
+.reset,
+.delete {
+  @apply bg-key-neutral-bg shadow-key-neutral-shadow text-color-neutral text-xl tracking-wider leading-none hover:brightness-150 hover:saturate-100;
+}
+
+.reset,
+.equals {
+  @apply col-span-2;
+}
+
+.equals {
+  @apply bg-key-accent-bg shadow-key-accent-shadow text-color-accent hover:saturate-50;
+}
