@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator App</title>
+    <!-- icon -->
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon" />
+    <!-- styles -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- js -->
+    <script src="index.js" defer></script>
+  </head>
+  <body
+    style="font-family: 'League Spartan', sans-serif"
+    class="grid place-items-center bg-primary-bg min-h-screen py-8 transition-all duration-700"
+  >
+    <!-- calc conatiner -->
+    <div class="font-bold w-11/12 max-w-lg grid gap-y-4">
+      <!-- title container -->
+      <div
+        class="title-container flex justify-between items-end gap-x-4 mb-3 text-color-primary transition-all duration-700"
+      >
+        <h1 class="text-3xl leading-none">calc</h1>
+        <!-- theme column -->
+        <div class="flex items-end gap-8">
+          <p class="uppercase text-sm tracking-wide">theme</p>
+
+          <!-- theme button -->
+          <div class="grid grid-col">
+            <p
+              class="flex items-center justify-between text-xs mb-1 px-1 transition-all duration-700"
+            >
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+            </p>
+            <!-- switch -->
+            <button
+              type="button"
+              class="block w-14 h-5 bg-light-primary-bg rounded-full p-1 transition-all duration-700"
+              data-theme-btn
+            >
+              <div class="theme-indicator"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- output container -->
+      <div
+        class="output-container bg-dark-primary-bg p-3 rounded-lg text-right text-color-primary min-h-[92px] transition-all duration-700"
+      >
+        <p class="text-xl break-all min-h-[28px]" data-previous-operand></p>
+        <p class="text-4xl break-all" data-current-operand>0</p>
+      </div>
+
+      <!-- keys container -->
+      <div
+        class="grid grid-cols-4 gap-4 text-color-primary font-bold text-2xl md:text-3xl p-4 bg-light-primary-bg rounded-lg transition-all duration-700"
+      >
+        <button type="button" data-number class="keys">7</button>
+        <button type="button" data-number class="keys">8</button>
+        <button type="button" data-number class="keys">9</button>
+        <button type="button" data-delete class="keys delete uppercase">
+          del
+        </button>
+        <button type="button" data-number class="keys">4</button>
+        <button type="button" data-number class="keys">5</button>
+        <button type="button" data-number class="keys">6</button>
+        <button type="button" data-operation class="keys">+</button>
+        <button type="button" data-number class="keys">1</button>
+        <button type="button" data-number class="keys">2</button>
+        <button type="button" data-number class="keys">3</button>
+        <button type="button" data-operation class="keys">-</button>
+        <button type="button" data-number class="keys">.</button>
+        <button type="button" data-number class="keys">0</button>
+        <button type="button" data-operation class="keys">/</button>
+        <button type="button" data-operation class="keys">x</button>
+        <button type="button" data-reset class="keys reset uppercase">
+          reset
+        </button>
+        <button type="button" data-equals class="keys equals">=</button>
+      </div>
+    </div>
+  </body>
+</html>
